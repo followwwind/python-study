@@ -30,9 +30,8 @@ def get_pg_conn():
 
 def get_http_sign():
     data = {}
-    headers = {"content-type": "application/json", "API-TOKEN": "9DDC566413D1BB4F9DD2EFOC44DAC296"}
-    # url = "http://127.0.0.1:5000/hello"
-    url = "http://api.fhjs.hxb:7080/api/gateway/marketing_automation"
+    headers = {"content-type": "application/json", "API-TOKEN": ""}
+    url = "http://127.0.0.1:5000/hello"
     res = requests.post(url, data=json.dumps(data), headers=headers)
     result = res.json()
     return result['data'][0]
@@ -40,9 +39,8 @@ def get_http_sign():
 
 def get_http_data(pageNo, pageSize):
     data = {"pageNo": pageNo, "pageSize": pageSize}
-    headers = {"content-type": "application/json", "API-TOKEN": "E09FE27DBCFBCD5F5838E6AC5A39A971"}
-    # url = "http://127.0.0.1:5000/hi"
-    url = "http://api.fhjs.hxb:7080/api/gateway/dm_lsd_user_info"
+    headers = {"content-type": "application/json", "API-TOKEN": ""}
+    url = "http://127.0.0.1:5000/hi"
     res = requests.post(url, data=json.dumps(data), headers=headers)
     result = res.json()
     return result['data']
