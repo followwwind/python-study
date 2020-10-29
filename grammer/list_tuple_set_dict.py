@@ -40,6 +40,8 @@ def dict_study():
     d2 = {'name': 'wind'}
     print(d)
     d2['age'] = 18
+    # 合并更新
+    d2.update({'sex': 18})
     for k, v in d2.items():
         print(f"key=>{k}, val=>{v}")
     print(d2.keys())
